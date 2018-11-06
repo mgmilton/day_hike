@@ -1,5 +1,5 @@
 class Trips < ApplicationRecord
-  has_many :hikes
+  has_many :hike dependent: :destroy
   has_many :trails, through: :hikes
 
   def longest_hiking_distance
